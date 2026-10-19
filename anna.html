@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#300b24">
+<title>Happy Dasara, Anna ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+:root{--wine:#300b24;--red:#a91e42;--pink:#ff6b91;--gold:#ffdc96;--cream:#fff4e9}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;overflow-x:hidden;color:#fff7f4;font-family:Poppins,Arial,sans-serif;background:radial-gradient(circle at 18% 12%,#90213e 0,transparent 32%),radial-gradient(circle at 82% 85%,#681544 0,transparent 34%),linear-gradient(135deg,#19091d,#4b1030 55%,#21091d)}
+.glow{position:fixed;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 25%,#fff1 48%,transparent 70%);animation:shine 9s linear infinite}
+@keyframes shine{from{transform:translateX(-70%)}to{transform:translateX(70%)}}
+.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 14px;position:relative;z-index:1}
+.card{width:min(760px,100%);min-height:540px;padding:clamp(24px,6vw,54px);border:1px solid #ffdc9660;border-radius:28px;text-align:center;background:linear-gradient(145deg,#ffffff16,#ffffff08);box-shadow:0 25px 80px #10010b80,inset 0 0 45px #ffb4c30b;backdrop-filter:blur(12px);display:flex;flex-direction:column;align-items:center;justify-content:center;animation:appear .7s ease both}
+@keyframes appear{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:2.5px;font-size:.72rem;margin:0 0 16px}
+h1{font-family:'Great Vibes',cursive;font-size:clamp(3.3rem,10vw,5.8rem);line-height:1.15;font-weight:400;margin:0 0 15px;color:#fff0f4;text-shadow:0 0 24px #ff6b9170}
+p{max-width:580px;font-size:clamp(.96rem,2.5vw,1.08rem);line-height:1.95;color:#fff0f3;margin:0 auto 20px}
+.icon{font-size:clamp(2.8rem,8vw,4.4rem);margin-bottom:16px;filter:drop-shadow(0 0 15px #ffd78355)}
+.heart{color:#ff476f;animation:heartbeat 1.2s infinite;display:inline-block;filter:drop-shadow(0 0 12px #ff315c)}
+@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.22)}30%{transform:scale(1)}45%{transform:scale(1.14)}}
+.divider{width:100px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:3px auto 23px}
+.buttons{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin-top:13px}
+button{border:0;border-radius:999px;padding:13px 22px;font:600 .94rem Poppins,Arial,sans-serif;cursor:pointer;transition:transform .2s,box-shadow .2s}
+button:hover{transform:translateY(-3px);box-shadow:0 8px 24px #ff315c45}
+.primary{background:linear-gradient(135deg,#ffe7ad,#ffb8c9);color:#4a1026}
+.secondary{background:#ffffff0d;color:#fff1f5;border:1px solid #ffffff55}
+.progress{display:flex;gap:7px;margin-bottom:24px}
+.dot{width:7px;height:7px;border-radius:8px;background:#ffffff35;transition:all .3s}
+.dot.active{width:25px;background:var(--gold)}
+.signature{font-family:'Great Vibes',cursive;font-size:2.2rem;color:var(--gold);margin:8px 0 4px}
+.tiny{font-size:.75rem;opacity:.7;margin-top:21px}
+.petal,.sparkle,.confetti{position:fixed;pointer-events:none;z-index:5}
+.petal{top:-30px;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(600deg);opacity:0}}
+.sparkle{color:var(--gold);opacity:.65;animation:twinkle 3s ease-in-out infinite alternate}
+@keyframes twinkle{from{opacity:.2;transform:scale(.7)}to{opacity:1;transform:scale(1.2) rotate(20deg)}}
+.confetti{top:-30px;animation:fall linear forwards}
+.music{position:fixed;right:12px;bottom:12px;z-index:10}
+.music button{background:#ffffff18;color:white;border:1px solid #ffffff45;padding:10px 14px;font-size:.82rem}
+@media(max-width:480px){.card{min-height:560px;border-radius:22px}.eyebrow{letter-spacing:1.5px}.music{right:7px;bottom:7px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="wrap"><main class="card" id="card" aria-live="polite"></main></div>
+<div class="music"><button id="musicBtn" type="button">♫ Gentle tones: Off</button></div>
+<script>
+const pages=[
+ {eyebrow:"A little surprise, made just for you",icon:"💌",title:"Hello, Anna",text:"I made this little surprise with love, just for you. Take a moment, relax, and open a message from your younger sibling.",button:"Open your surprise ❤️"},
+ {eyebrow:"A festival wish from my heart",icon:"🏹",title:"Happy Dasara, Anna!",text:"May this Dasara bring you happiness, courage, success, good health, and new beginnings. May goodness always win in your life, and may your days be filled with peace and joy.",button:"A message from my heart…"},
+ {eyebrow:"A little thank-you",icon:"❤️",title:"I'm lucky to have you",text:"Thank you for being my Anna — for your care, your guidance, and the ways you have been there for me. Even when I don't say it often, you mean so much to me. Having you as my elder brother is a blessing I will always cherish.",button:"There's more to say…"},
+ {eyebrow:"A promise from your younger sibling",icon:"🤝",title:"I'll always be there",text:"Life may take us through different paths, but I will always wish the best for you. I'll cheer for your success, stand beside you in difficult times, and do my best to make you proud. Our bond will always be special to me.",button:"One last surprise ✨"},
+ {eyebrow:"With love, always",icon:"🪔",title:"Happy Vijaya Dasami, Anna!",text:"May every challenge become a new strength, every dream move closer, and every new day bring you a reason to smile. Thank you for being my brother, my guide, and an important part of my life. I wish you happiness today and always.",button:"Reveal my final message 💖",final:true},
+ {eyebrow:"One bond, a lifetime of memories",icon:"💖",title:"Love you, Anna!",text:"No matter how much we grow or how busy life becomes, you will always be my Anna and I will always be your younger sibling. May our family stay happy, healthy, and united. This little website is just one small way to say: you are loved, appreciated, and never taken for granted.",button:"Read it again ↺",restart:true,signature:"With love, your younger sibling ❤️"}
+];
+let pageIndex=0;
+const card=document.getElementById("card");
+function render(){
+ const p=pages[pageIndex];
+ card.innerHTML=`<div class="progress">${pages.map((_,i)=>`<span class="dot ${i===pageIndex?'active':''}"></span>`).join("")}</div>
+ <div class="eyebrow">${p.eyebrow}</div><div class="icon">${p.icon}</div><h1>${p.title}</h1><div class="divider"></div>
+ <p>${p.text}</p>${p.signature?`<div class="signature">${p.signature}</div>`:""}
+ <div class="buttons"><button class="primary" id="next">${p.button}</button>${pageIndex>0?'<button class="secondary" id="back">← Previous</button>':""}</div>
+ <div class="tiny">Made with love for Anna ✨</div>`;
+ document.getElementById("next").addEventListener("click",()=>{
+   if(p.final){celebrate();pageIndex++;render();celebrate();}
+   else if(p.restart){pageIndex=0;render();}
+   else{pageIndex=Math.min(pageIndex+1,pages.length-1);render();}
+ });
+ const back=document.getElementById("back");
+ if(back)back.addEventListener("click",()=>{pageIndex=Math.max(0,pageIndex-1);render();});
+}
+function sprinkle(){
+ const symbols=["🌸","🌼","❤️","✨","🌺"];
+ const el=document.createElement("span");el.className="petal";
+ el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+ el.style.left=Math.random()*100+"vw";el.style.fontSize=(13+Math.random()*18)+"px";
+ el.style.animationDuration=(7+Math.random()*7)+"s";document.body.appendChild(el);
+ setTimeout(()=>el.remove(),15000);
+}
+function celebrate(){
+ const symbols=["💖","❤️","✨","🌸","🎉","🪔"];
+ for(let i=0;i<42;i++){const el=document.createElement("span");el.className="confetti";
+ el.textContent=symbols[Math.floor(Math.random()*symbols.length)];el.style.left=Math.random()*100+"vw";
+ el.style.fontSize=(14+Math.random()*18)+"px";el.style.animationDuration=(2+Math.random()*3)+"s";
+ document.body.appendChild(el);setTimeout(()=>el.remove(),5500);}
+}
+for(let i=0;i<24;i++){const s=document.createElement("span");s.className="sparkle";s.textContent="✦";
+ s.style.left=Math.random()*100+"vw";s.style.top=Math.random()*100+"vh";
+ s.style.fontSize=(8+Math.random()*13)+"px";s.style.animationDelay=Math.random()*3+"s";document.body.appendChild(s);}
+setInterval(sprinkle,700);render();
+
+/* Optional soft browser-generated tones; audio starts only after a tap. */
+let musicOn=false,noteTimer=null,audioCtx=null;
+const musicBtn=document.getElementById("musicBtn");
+function playGentleTones(){
+ const AudioCtx=window.AudioContext||window.webkitAudioContext;
+ if(!AudioCtx){musicBtn.textContent="♫ Audio unavailable";return;}
+ audioCtx=audioCtx||new AudioCtx();if(audioCtx.state==="suspended")audioCtx.resume();
+ const notes=[261.63,329.63,392,329.63,293.66,349.23,440,349.23];let i=0;
+ function note(){
+  if(!musicOn)return;
+  const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();
+  osc.type="sine";osc.frequency.value=notes[i++%notes.length];
+  gain.gain.setValueAtTime(.0001,audioCtx.currentTime);
+  gain.gain.exponentialRampToValueAtTime(.11,audioCtx.currentTime+.08);
+  gain.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+.55);
+  osc.connect(gain);gain.connect(audioCtx.destination);osc.start();osc.stop(audioCtx.currentTime+.58);
+  noteTimer=setTimeout(note,650);
+ }note();
+}
+musicBtn.addEventListener("click",()=>{musicOn=!musicOn;
+ if(musicOn){musicBtn.textContent="♫ Gentle tones: On";playGentleTones();}
+ else{clearTimeout(noteTimer);musicBtn.textContent="♫ Gentle tones: Off";}});
+</script>
+</body>
+</html>
